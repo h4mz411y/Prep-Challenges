@@ -34,20 +34,27 @@ const findMax = (arr) => {
 //  inside the array (there could be strings inside), without using built-in functions
 //  
 // Input: [20, '234', 'car', 41, 20, 'chair']
-// Output: 81
+// Output: 81    const element = array[i];
 //  
 
 const sumNums = (arr)=>{
     let sum = 0;
-    let i =0;
-    for (i=0 ; i< arr.length ; i++)
-    if (typeof arr[i] === "number") {
-        sum = sum + arr [i];
-
-
+    for (let i = 0; i < arr.length; i++) 
+        if (typeof arr[i] === "number"){
+            sum = sum + arr [i];
+         
     }
     return sum;
 }
+         
+            
+        
+        
+   
+
+    
+
+
 
 
 // -------------------------------------------------------------------------------------------------------
@@ -60,11 +67,18 @@ const sumNums = (arr)=>{
 //  without using built-in functions
 //  
 // Input: ['C#', 'JS', 'Ruby','Python'] 
-// Output: ['Python','Ruby','JS','C#']
+// Output: ['Python','Ruby','JS','C#'] const element = array[i];
 
-const reverseArray = (arr)=>{
+const reverseArray = (arr) => {
     // write your code here
-}
+    const newArr = [];
+    let counter = 0;
+    for (let i = arr.length - 1; i >= 0; i--) {
+      newArr[counter] = arr[i];
+      counter++;
+    }
+    return newArr;
+  };
 // -------------------------------------------------------------------------------------------------------
 
 module.exports = {findMax , sumNums, reverseArray};
